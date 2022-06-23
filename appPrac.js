@@ -119,24 +119,65 @@ plus(23, 45);
 
 const calculator = {
   plus : function (a, b) {
-    console.log(a + b);
+    return a + b;
   },
   minus : function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
   multiply : function (a, b) {
-    console.log(a * b);
+    return a * b;
   },
   divide : function (a, b) {
-    console.log(a / b);
+    return a / b;
   },
   power : function (a, b) {
-    console.log(a ** b);
+    return a ** b;
   },
 }
 
-calculator.plus (10, 2);
-calculator.minus (10, 2);
-calculator.multiply (10, 2);
-calculator.divide (10, 2);
-calculator.power (10, 2);
+const plusRes = calculator.plus (10, 2);
+console.log(plusRes);
+const minusRes = calculator.minus (plusRes, 2);
+console.log(minusRes);
+const multiRes = calculator.multiply (minusRes, 2);
+console.log(multiRes);
+const divRes = calculator.divide (10, multiRes);
+console.log(divRes);
+const powerRes = calculator.power (10, divRes);
+console.log(powerRes);
+
+
+
+
+// korean age calculator
+const ages = 20;
+
+function calculateKrAge (ageOfForeigner) {
+  return ageOfForeigner + 2;
+}
+const KrAge = calculateKrAge(age);
+console.log(KrAge);
+
+
+// 유효성 판단
+const age = parseInt(prompt("How old are you ?"));
+
+if (isNaN(age)) {
+  console.log("Please write a number"); 
+} else {
+  console.log("Thank you for writing your age");
+}
+
+
+// 조건문 
+const someoneAge = parseInt(prompt("How old are you ?"));
+
+if (isNaN(someoneAge)) {
+  console.log("Please write a number");
+} else if (someoneAge < 18) {
+  console.log("You can't drink yet");
+} else if (someoneAge >= 18 && someoneAge <= 50) {
+  console.log("You can drink :)");
+} else {
+  console.log("Do not Drink");
+}
