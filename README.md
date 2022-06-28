@@ -6,6 +6,8 @@ nomadCoder Vanilla JS로 크롬 만들기
 
 ---
 
+# step1. Login Form
+
 ## Solution for Submit form
 
 : form tag는 그 자체로 submit event를 가진다. = page-reloading 문제 발생
