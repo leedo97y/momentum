@@ -32,7 +32,8 @@ event를 argument로 받고 있고, event는 이벤트 리스너를 받아오는
 
 4. localStorage에 username을 넣어주기 (setItem) - key, value 순으로
 
-5. loginForm의 classList에 "hidden" 이라는 class 추가
+5. loginForm의 classList에 "hidden" 이라는 class 추가 
+-> 그냥 HTML의 form 태그에 class "hidden" 바로 추가 (if else 작성 후 수정)
 
 ```js
 /*
@@ -41,7 +42,7 @@ event를 argument로 받고 있고, event는 이벤트 리스너를 받아오는
 
 ```
 
-6. HTML에 h1 빈 태그 작성
+6. HTML에 h1 태그 작성, class "hidden" 지정, id "greeting" 지정
 
 7. greeting 변수 지정해주기
 -> querySelector를 이용하여 아이디 가져오기
