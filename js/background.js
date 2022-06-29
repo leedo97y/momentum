@@ -20,4 +20,8 @@ bgImg.src = `img/${chosenImages}`;
 
 document.body.appendChild(bgImg);
 // html 코드의 body 부분에 child로 append 해준다.
+
+// append = add this code's back
+// prepend = add this code's front
+
 // 뒤로 보내는 것은 CSS에서 해결해야 할 부분 !
