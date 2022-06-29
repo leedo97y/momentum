@@ -65,6 +65,8 @@ author.innerText = todaysQuote.author;
 
 /**
  * [Strategy]
+ * Math.random() * LENGTH_QUOTES
+ * => random 다음에 length를 붙이면 length 만큼의 범위를 지정해주는 것과 같음.
  *
  * floor는 1.99999도 1로 내려줌 (내림)
  * ceil은 1.9999나 1.111이나 전부 2로 올려줌 (올림)
