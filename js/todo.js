@@ -38,7 +38,7 @@ function paintTodo(newTodo) {
 }
 
 function deleteTodo(event) {
-  const deleteLi = event.target.parentElement.innerText;
+  const deleteLi = event.target.parentElement;
   // target is html element "clicked"
   // button's parentElement is li
   deleteLi.remove();
@@ -49,8 +49,8 @@ todoForm.addEventListener("submit", handleTodoSumbit);
 
 const savedTodo = localStorage.getItem(TODOS_KEY);
 console.log(savedTodos);
-if (savedTodos !== null) {
-  const parsedTodos = JSON.parse(savedTodos);
+if (savedTodo !== null) {
+  const parsedTodos = JSON.parse(savedTodo);
   parsedTodos.forEach((item) => console.log("this is the turn of", item));
 }
 
