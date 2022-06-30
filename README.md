@@ -186,8 +186,6 @@ const seconds = String(date.getSeconds()).padStart(2, "0");
 const clock = document.querySelector("h2#clock");
 ```
 
-<br>
-
 2. 함수 getClock 작성
 
 3. new Date()를 변수 date에 저장
