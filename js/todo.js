@@ -5,7 +5,9 @@ const todoList = document.getElementById("todo-list");
 const TODOS_KEY = "todos";
 
 // create array
-const toDos = [];
+let toDos = [];
+// want to update array -> change 'const' to 'let'
+// and turn 'toDos' to 'parsedTodos( = old todos )'
 
 function savedTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
@@ -50,7 +52,9 @@ todoForm.addEventListener("submit", handleTodoSumbit);
 const savedTodo = localStorage.getItem(TODOS_KEY);
 console.log(savedTodos);
 if (savedTodo !== null) {
-  const parsedTodos = JSON.parse(savedTodo);
+  const parsedTodos = JSON.parse(savedTodo); // old one
+  toDos = parsedTodos;
+  // turn toDos old one
   parsedTodos.forEach(paintTodo); // arrow function
 }
 
