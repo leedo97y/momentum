@@ -19,16 +19,21 @@ function handleTodoSumbit(event) {
   event.preventDefault();
   const newTodo = todoInput.value; // save the value
   todoInput.value = ""; // empty the value
-  toDos.push(newTodo);
-  paintTodo(newTodo);
+  const newTodoObj = {
+    text: newTodo,
+    id: Date.now(),
+  }; // 형식을 바꿈
+  toDos.push(newTodoObj);
+  paintTodo(newTodoObj);
   savedTodos();
 }
 
 function paintTodo(newTodo) {
   const li = document.createElement("li"); // create li
+  li.id = newTodo.id; // add id in 'li'
   //
   const span = document.createElement("span"); // create span
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   //
   const button = document.createElement("button"); // create button
   button.innerText = "✘";
@@ -44,6 +49,8 @@ function deleteTodo(event) {
   // target is html element "clicked"
   // button's parentElement is li
   deleteLi.remove();
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+  // li.id = String, toDo.id = Number
   // click button, remove li
 }
 
@@ -55,8 +62,12 @@ if (savedTodo !== null) {
   const parsedTodos = JSON.parse(savedTodo); // old one
   toDos = parsedTodos;
   // turn toDos old one
-  parsedTodos.forEach(paintTodo); // arrow function
+  parsedTodos.forEach(paintTodo);
+  // excuting every array in parsedTodos
 }
+// make new array excluding items that you want delete
+// = using filter
+// filter function can return 'True items', 'False item' is excluded
 
 /**
  * [ Functions ]
