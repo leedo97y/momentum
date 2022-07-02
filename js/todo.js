@@ -9,7 +9,7 @@ let toDos = [];
 // want to update array -> change 'const' to 'let'
 // and turn 'toDos' to 'parsedTodos( = old todos )'
 
-function savedTodos() {
+function saveTodos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
@@ -25,7 +25,7 @@ function handleTodoSumbit(event) {
   }; // 형식을 바꿈
   toDos.push(newTodoObj);
   paintTodo(newTodoObj);
-  savedTodos();
+  saveTodos();
 }
 
 function paintTodo(newTodo) {
@@ -48,17 +48,20 @@ function deleteTodo(event) {
   const li = event.target.parentElement;
   // target is html element "clicked"
   // button's parentElement is li
-  li.remove();
+  li.remove(); // 아이템 지우기
   console.log(typeof li.id);
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   // li.id = String, toDo.id = Number
-  // click button, remove li
+  // ->  So, none of them is removed = use parseInt(li.id) turn string to number
+  saveTodos();
+  // you must remember that call saveTodos one more time
+  // 지워지고 남은 아이템 보여주기
 }
 
 todoForm.addEventListener("submit", handleTodoSumbit);
 
 const savedTodo = localStorage.getItem(TODOS_KEY);
-console.log(savedTodos);
+console.log(saveTodos);
 if (savedTodo !== null) {
   const parsedTodos = JSON.parse(savedTodo); // old one
   toDos = parsedTodos;
