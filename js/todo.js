@@ -45,10 +45,11 @@ function paintTodo(newTodo) {
 }
 
 function deleteTodo(event) {
-  const deleteLi = event.target.parentElement;
+  const li = event.target.parentElement;
   // target is html element "clicked"
   // button's parentElement is li
-  deleteLi.remove();
+  li.remove();
+  console.log(typeof li.id);
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
   // li.id = String, toDo.id = Number
   // click button, remove li
