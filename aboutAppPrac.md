@@ -162,6 +162,28 @@ console.log(arr); // 1, 2, 3, 4, 5, 6
 
 <br>
 
+# Function (함수)
+
+어떤 코드를 반복시킬 수 있게 만들어줌.
+<br>
+반복되는 코드를 함수로 만들어주면 코드를 줄일 수 있고, 훨씬 효율적임.
+<br>
+\+ 실행시키는 코드가 필요하다.
+
+```js
+function iamGroot() {
+  alert("Hi!!");
+}
+
+ianGroot();
+```
+
+<br>
+
+---
+
+<br>
+
 # Calculator 만들기
 
 ```js
