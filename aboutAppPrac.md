@@ -258,3 +258,97 @@ console.log(kr); // 68
 
 함수가 함수 외부에 적용되기 위해서는 return 코드가 필요하다.
 <br>
+콘솔 코드는 실제로 실행안되며, 콘솔에서 보여주는 것이다.
+
+<br>
+
+---
+
+<br>
+
+## prompt
+
+```js
+const age = prompt("How old are you?");
+/* 
+prompt can show you the message in '()'
+and stopping execution.
+
+but you can not change this with CSS,
+So now you can use 'modal' instead of 'prompt'
+*/
+```
+
+<br>
+
+## typeof
+
+typeof는 값의 type을 알려준다.
+
+<br>
+
+## parseInt
+
+string type을 number로 변환할 때 쓰인다.
+<br>
+
+`const age = "15"` 라고 했을때,
+<br>
+`typeof age` = string 이며
+<br>
+`typeof (parseInt(age))` = number 이다.
+
+<br>
+
+## isNaN
+
+결과가 Not a Number 인지 boolean으로 알려준다.
+<br>
+
+결과가 `NaN = true`
+<br>
+결과가 `NaN != false`
+
+<br>
+
+# 조건문 (if ~ else)
+
+조건(condition)을 주어 동작을 제어할 수 있음.
+
+```js
+if (condition) {
+  // true
+} else {
+  // false
+}
+```
+
+condition 즉, 조건은 반드시 boolean으로 나타낼 수 있어야 한다.
+
+<br>
+
+## else if
+
+조건이 하나보다 많은 경우, 조건을 else if를 이용해 추가해준다.
+
+```js
+if (condition1) {
+  // 1
+} else if (condition2) {
+  // 2
+} else {
+  // 때에 따라 작성 안해도 됨
+}
+```
+
+<br>
+
+## && , ||
+
+&&는 And 연산자로 `true && false === false` <br>
+||는 Or 연산자로 `true || false === true`
+<br>
+
+즉, and 연산자는 둘 다 참이어야 true가 되며 or 연산자는 둘 중 하나라도 참이면 true가 된다.
+
+<br>
