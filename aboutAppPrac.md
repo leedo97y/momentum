@@ -180,19 +180,81 @@ ianGroot();
 
 <br>
 
----
+## function에서 데이터를 받는 방법
+
+함수이름 다음의 `()`안에 받고자하는 인수를 넣어주면 된다.
+
+```js
+function iamGroot(nameOfPerson, number) {
+  alert(`Hello welcome ${nameOfPerson}!! you are ${number}th member in here!`);
+}
+
+iamGroot("doy", 20);
+iamGroot("edge", 13);
+```
 
 <br>
 
-# Calculator 만들기
+## object 안에 function 넣기
+
+object의 `{}` 안에 `:` 다음에 함수이름을 뺀 함수식을 넣어주면 된다.
 
 ```js
-const a = 10;
-const b = 5;
+const allName = {
+  name: function (firstName, name) {
+    console.log(firstName + name);
+  },
+};
 
-const plus = a + b;
-const minus = a - b;
-const multiply = a * b;
-const divide = a / b;
-const power = a ** b;
+allName.name("Lee", "Doy");
 ```
+
+<br>
+
+## Calculator 만들기
+
+```js
+const calculator = {
+  plus: function (a, b) {
+    return a + b;
+  },
+  minus: function (a, b) {
+    return a - b;
+  },
+  multiply: function (a, b) {
+    return a * b;
+  },
+  divide: function (a, b) {
+    return a / b;
+  },
+  power: function (a, b) {
+    return a ** b;
+  },
+};
+
+calculator.plus(10, 5);
+calculator.minus(10, 5);
+calculator.multiply(10, 5);
+calculator.divide(10, 5);
+calculator.power(10, 5);
+```
+
+<br>
+
+## return
+
+return을 해주면 해당 함수의 결과를 함수 호출 부분에 넘겨주어 호출 부분을 결과로 대체해 주는 것이다.
+
+```js
+const age = 66;
+function age(foreignAge) {
+  return foreignAge + 2; // --- 1
+}
+
+const kr = age(age); // --- 2
+console.log(kr); // 68
+// 1이 2의 = 다음부분을 대체한다.
+```
+
+함수가 함수 외부에 적용되기 위해서는 return 코드가 필요하다.
+<br>
