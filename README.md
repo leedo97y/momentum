@@ -117,12 +117,12 @@ if 부분은 localStorage에 저장된 username이 null 즉, 존재하지 않는
 
 ## STEPS
 
-[# STEP2. Clock 부분](ClockReview.md)
+[# STEP2. Clock 부분](/md/ClockReview.md)
 
-[# STEP3. Quote 부분](QuoteReview.md)
+[# STEP3. Quote 부분](/md/QuoteReview.md)
 
-[# STEP4. Background 부분](BackgroundReview.md)
+[# STEP4. Background 부분](/md/BackgroundReview.md)
 
-[# STEP5. ToDoList 부분](ToDoListReview.md)
+[# STEP5. ToDoList 부분](/md/ToDoListReview.md)
 
-[# STEP6. Weather 부분](WeatherReview.md)
+[# STEP6. Weather 부분](/md/WeatherReview.md)
