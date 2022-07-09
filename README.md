@@ -108,3 +108,21 @@ if 부분은 localStorage에 저장된 username이 null 즉, 존재하지 않는
 ## Login form 전체 리뷰
 
 보여줄 부분과 보여지지 않을 부분 등 미리 구상해놔야 코드 작성할때 세세한 부분까지 다 고려해서 작성할 수 있을 것 같다.
+
+<br>
+
+---
+
+<br>
+
+## STEPS
+
+[# STEP2. Clock 부분](ClockReview.md)
+
+[# STEP3. Quote 부분](QuoteReview.md)
+
+[# STEP4. Background 부분](BackgroundReview.md)
+
+[# STEP5. ToDoList 부분](ToDoListReview.md)
+
+[# STEP6. Weather 부분](WeatherReview.md)
