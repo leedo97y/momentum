@@ -445,3 +445,25 @@ title.addEventListener("click", handleClick);
 해당 옵션이 달린 부분을 클릭 했을때 실행되는 이벤트이다.
 <br>
 코드 예시는 위에 있다.
+
+<br>
+
+---
+
+<br>
+
+## Copy 옵션 (window)
+
+"복사하기" 기능을 사용했을 시 실행되는 이벤트이다.
+
+<br>
+
+---
+
+<br>
+
+## Offline 옵션 (window)
+
+인터넷 연결이 없다면 창에서 메세지를 띄워준다.
+<br>
+Online 옵션도 있으며, 와이파이가 켜지면 메세지를 띄워준다.
