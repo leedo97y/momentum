@@ -352,3 +352,96 @@ if (condition1) {
 즉, and 연산자는 둘 다 참이어야 true가 되며 or 연산자는 둘 중 하나라도 참이면 true가 된다.
 
 <br>
+
+---
+
+<br>
+
+# Browser Element 가져오기 개념
+
+## getElementById / getElementsById
+
+`getElementById`는 html 안에서 id를 사용해 하나의 엘리먼트를 가져올때 쓰이며,
+<br>
+`getElementsById`는 html 태그에서 하나의 id로 여러개의 엘리먼트를 가져올때 쓰인다.
+
+<br>
+
+---
+
+<br>
+
+## getElementByClassName / getElementsByClassName
+
+`getElementByClassName`은 className을 기준으로 엘리먼트를 가져올때 쓰이며, Array로 가져온다.
+<br>
+`getElementsByClassName`은 className을 기준으로 엘미먼트를 여러개 가져올때 쓰이며, 이 또한 Array로 가져온다.
+
+---
+
+<br>
+
+## getElementByTagName / getElementsByTagName
+
+`getElementByTagName`은 태그이름으로 엘리먼트를 가져올때 쓰이며,
+<br>
+`getElementsByTagName`은 엘리먼트를 여러개 가져올때 쓰인다.
+
+---
+
+<br>
+
+## querySelector / querySelectorAll
+
+`querySelector`는 html 안의 태그 중 하나를 가져오는 것으로, css의 방식을 이용해 엘리먼트를 가져올 수 있다.
+<br>
+\- `.main`은 클래스를, `#main`은 아이디를 찾아올 때 쓰인다.
+
+```js
+const main = document.querySelector(".main h1");
+// h1 태그에서 main이라는 class를 가진 부분을 가져옴
+
+const main = document.querySelector(".main h1:first-child");
+// 첫번째 요소만 가져오게 할 수 있음
+
+const main = document.querySelector("#main form");
+// main이라는 id를 가진 요소의 하위요소 form을 가져올 수 있음
+```
+
+`querySelectorAll`은 html 안의 태그 중 여러개를 가져올때 쓰인다.
+
+<br>
+
+---
+
+<br>
+
+# Event
+
+## addEvnetListener
+
+`addEvnetListener`로 이벤트를 달아줄 수 있다.
+<br>
+이 코드를 작성하고 나면 이벤트 핸들러 코드인 함수 코드를 작성해줘야한다.
+
+```js
+function handleClick() {
+  console.log("clicked!");
+}
+// 이벤트 코드를 작성하고 나서는 이벤트 핸들러 코드를 작성해 주면 된다.
+
+title.addEventListener("click", handleClick);
+// 이벤트 코드 작성 - 하고싶은 동작, 이벤트 핸들러명
+```
+
+<br>
+
+---
+
+<br>
+
+## Click 옵션
+
+해당 옵션이 달린 부분을 클릭 했을때 실행되는 이벤트이다.
+<br>
+코드 예시는 위에 있다.
